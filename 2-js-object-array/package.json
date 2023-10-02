@@ -1,0 +1,10 @@
+{
+  "name": "object-array",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --watch app.js"
+  },
+  "license": "ISC"
+}
