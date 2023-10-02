@@ -1,10 +1,10 @@
 import { products } from './constants.js';
 
 const priceRange30To100 = products.filter(({ unitPrice }) => unitPrice > 30 && unitPrice < 100).length;
-const startsWithA = products.filter((product) => (product.name.startsWith('a')));
-const endsWithA = products.filter((product) => (product.name.slice(-1) === ('a')));
-const id10 = products.filter((product) => product.id.toString().trim() === '10');
-const noDiscontinuedCount = products.filter((product) => !product.discontinued).length;
+const startsWithA = products.filter(({ name }) => (name.startsWith('a')));
+const endsWithA = products.filter(({ name }) => (name.slice(-1) === ('a')));
+const id10 = products.filter(({ id }) => id.toString().trim() === '10');
+const noDiscontinuedCount = products.filter(({ discontinued }) => !discontinued).length;
 const expensiveProduct = products.reduce((max, product) => (max.unitPrice > product.unitPrice) ? max : product);
 const cheapestProduct = products.reduce((min, product) => (min.unitPrice < product.unitPrice) ? min : product);
 
